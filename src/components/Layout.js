@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import Header from './common/Header';
+import { connect } from 'react-redux';
 
 class Layout extends React.Component{
 
   render() {
     return (
       <div className="container-fluid">
-        <Header />
+        <Header ajaxRequests={this.props.ajaxRequests}/>
         {this.props.children}
       </div>
     );
@@ -14,7 +15,14 @@ class Layout extends React.Component{
 }
 
 Layout.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.object.isRequired,
+  ajaxRequests: PropTypes.bool.isRequired
 };
 
-export default Layout;
+function mapStateToProps(state) {
+  return {
+    ajaxRequests: state.ajaxRequests > 0
+  };
+}
+
+export default connect(mapStateToProps)(Layout);

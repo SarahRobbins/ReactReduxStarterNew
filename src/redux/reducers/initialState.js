@@ -1,4 +1,5 @@
 export default {
   books: [],
-  categories: []
+  categories: [],
+  ajaxRequests: 0
 };

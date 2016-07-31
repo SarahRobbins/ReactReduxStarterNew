@@ -1,23 +1,18 @@
 import React, { PropTypes } from 'react';
 import BookListRecord from './BookListRecord';
-import toastr from 'toastr';
 
-const BookList = ({books, deleteConfirmation}) => {
-
+const BookList = ({books}) => {
   return (
     <table className="table table-striped table-hover">
       <thead>
-      <tr>
         <th>Title</th>
         <th>Author</th>
         <th>Category</th>
         <th>Pages</th>
-        <th>Remove</th>
-        </tr>
       </thead>
       <tbody>
       {books.map(book => {
-        return <BookListRecord key={book.id} book={book} deleteConfirmation={deleteConfirmation}/>;
+        return <BookListRecord key={book.id} book={book}/>;
       })}
       </tbody>
     </table>
@@ -25,8 +20,7 @@ const BookList = ({books, deleteConfirmation}) => {
 };
 
 BookList.propTypes = {
-  books: PropTypes.array.isRequired,
-  deleteConfirmation: PropTypes.func.isRequired
+  books: PropTypes.object.isRequired
 };
 
 export default BookList;

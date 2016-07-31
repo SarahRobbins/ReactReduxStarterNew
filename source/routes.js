@@ -10,10 +10,8 @@ export default (
   <Route path="/" component={Layout}>
     <IndexRoute component={HomePage} />
     <Route path="books" component={BookPage} />
-    <Route path="books/:category" component={BookPage}/>
     <Route path="book" component={BookDetailsPage} />
-    <Route path="book/:category" component={BookDetailsPage} />
-    <Route path="book/:category/:bookId" component={BookDetailsPage} />
+    <Route path="book/:id" component={BookDetailsPage} />
     <Route path="contact" component={ContactPage} />
   </Route>
 );

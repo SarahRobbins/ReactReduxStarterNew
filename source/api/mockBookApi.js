@@ -5,35 +5,35 @@ import delay from './delay';
 // All calls return promises.
 const books = [
   {
-    id: "the-state's-recent-architects",
+    id: "the state's recent architects",
     title: "The State's Recent Architects",
     author: "Robert White",
     pages: "508",
     category: "novels"
   },
   {
-    id: "the-kingdom's-major-literary-cults",
+    id: "the kingdom's major literary cults",
     title: "The Kingdom's Major Literary Cults",
     author: "Ronald Roger",
     pages: "310",
     category: "short stories"
   },
   {
-    id: "architecting-apps-for-the-real-world",
+    id: "architecting apps for the real world",
     title: "Architecting Applications for the Real World",
     author: "Cory House",
     pages: "252",
     category: "biographies"
   },
   {
-    id: "becoming-an-outlier",
+    id: "becoming an outlier",
     title: "Becoming an Outlier",
     author: "Sally Johnson",
     pages: "230",
     category: "novels"
   },
   {
-    id: "the-military-treaties-of-the-earldoms",
+    id: "the military treaties of the earldoms",
     title: "The Military Treaties of the Earldoms",
     author: "John Doe",
     pages: "510",
