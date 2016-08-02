@@ -1,13 +1,8 @@
-import { combineReducers } from 'redux';
-import bookReducer from './bookReducer';
-import categoryReducer from './categoryReducer';
-import ajaxRequestsReducer from './ajaxRequestsReducer';
+import {combineReducers} from 'redux';
+import toDosReducer from './toDosReducer';
 
-
-const rootReducer = combineReducers({
-  books: bookReducer,
-  categories: categoryReducer,
-  ajaxRequests: ajaxRequestsReducer
+const rootReducer =  combineReducers({
+  toDos: toDosReducer
 });
 
 export default rootReducer;

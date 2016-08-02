@@ -1,5 +1,3 @@
 export default {
-  books: [],
-  categories: [],
-  ajaxRequests: 0
+  toDos: []
 };

@@ -1,23 +1,21 @@
 import 'babel-polyfill';
 import React from 'react';
-import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router';
+import {render} from 'react-dom';
+import {Router, browserHistory} from 'react-router';
 import routes from './routes';
+import {Provider} from 'react-redux';
 import configureStore from './redux/store/configureStore';
-import { Provider } from 'react-redux';
-import { loadBooks } from './redux/actions/bookActions';
-import { loadCategories } from './redux/actions/categoryActions';
+import {loadToDos} from './redux/actions/toDoActions';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
 
 const store = configureStore();
-store.dispatch(loadBooks());
-store.dispatch(loadCategories());
+store.dispatch(loadToDos());
 
-render (
+render(
   <Provider store={store}>
-    <Router history={browserHistory} routes={routes} />
+    <Router routes={routes} history={browserHistory} />
   </Provider>,
-       document.getElementById('app')
+  document.getElementById('app')
 );
